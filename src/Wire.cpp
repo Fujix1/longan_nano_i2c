@@ -9,7 +9,6 @@
 */
 
 #include "Wire.h"
-
 #define I2C0_OWN_ADDRESS7 0x72
 
 void TwoWire::begin(void)
@@ -51,22 +50,24 @@ void TwoWire::beginTransmission(uint8_t address)
   i2c_flag_clear(I2C0, I2C_FLAG_ADDSEND);
 }
 
-void TwoWire::write(uint8_t dat)
+size_t TwoWire::write(uint8_t dat)
 {
   /* data transmission */
   i2c_data_transmit(I2C0, dat);
   /* wait until the TBE bit is set */
   while(!i2c_flag_get(I2C0, I2C_FLAG_TBE));
+  return 1;
 }
 
-void TwoWire::write(const uint8_t *dat, size_t len)
+size_t TwoWire::write(const uint8_t *dat, size_t quantity)
 {
-  for (size_t i = 0; i < len; i++) {
+  for (size_t i = 0; i < quantity; i++){
     /* data transmission */
     i2c_data_transmit(I2C0, dat[i]);
     /* wait until the TBE bit is set */
     while(!i2c_flag_get(I2C0, I2C_FLAG_TBE));
   }
+  return quantity;
 }
 
 void TwoWire::endTransmission(void)
