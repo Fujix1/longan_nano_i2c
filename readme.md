@@ -2,7 +2,7 @@
 
 Longan Nano 用の Arduino Wire 風 I2C 送信専用ライブラリです。本家のように高機能ではないですが、「今すぐ I2C 機器を設定したい！」というようなときにどうぞ（いずれ読み込みも追加したい）。
 
-なお、基本のコードは [なんとなく活動記録。](http://blueeyes.sakura.ne.jp/2019/10/27/2684/)さんを参考にさせていただきました。
+なお、基本のコードは [GD32VF103 Firmware Library](https://github.com/riscv-mcu/GD32VF103_Firmware_Library/blob/master/Examples/I2C/Master_transmitter/main.c)を参考にしました。
 
 
 ## 使い方 ##
