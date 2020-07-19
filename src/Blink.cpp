@@ -27,6 +27,7 @@ void loop() {
   digitalWrite(LED_BLUE, LOW);
   digitalWrite(LED_GREEN, LOW);
 
+
   Wire.beginTransmission(0x2F);
   Wire.write(cnt);
   Wire.endTransmission();
