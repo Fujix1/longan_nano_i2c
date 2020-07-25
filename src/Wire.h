@@ -7,6 +7,8 @@
   Note: Still no reading functionality.
 
 */
+#ifndef __WIRE_H
+#define __WIRE_H
 
 #include <gd32vf103.h>
 
@@ -21,3 +23,4 @@ class TwoWire
 };
 
 extern TwoWire Wire;
+#endif
