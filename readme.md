@@ -4,10 +4,14 @@ Longan Nano 用の Arduino Wire 風 I2C 送信専用ライブラリです。本�
 
 なお、基本のコードは [GD32VF103 Firmware Library](https://github.com/riscv-mcu/GD32VF103_Firmware_Library/blob/master/Examples/I2C/Master_transmitter/main.c)を参考にしました。
 
+This is a quasi Wire library to support I2C (send only) for Longan Nano. 
 
-## 使い方 ##
+## 使い方 USAGE ##
 
 Arduino と同じです。``Wire.h`` を ``#include`` して、以下のように使用します。PB6 が SCL、PB7 が SDA です。
+
+Same as Arduino, just include Wire.h and use as below. BE SURE TO CONNECT A PULLUP REGISTOR!
+
 ```
 Wire.begin(); // 初期化
 Wire.beginTransmission( 0x2F ); // 送信処理開始 引数 I2C アドレス（7ビット）
