@@ -10,7 +10,7 @@ This is a quasi Wire library to support I2C (send only) for Longan Nano.
 
 Arduino と同じです。``Wire.h`` を ``#include`` して、以下のように使用します。PB6 が SCL、PB7 が SDA です。
 
-Same as Arduino, just include Wire.h and use as below. BE SURE TO CONNECT A PULLUP REGISTOR!
+Same as Arduino, just include Wire.h and use as below. BE SURE TO CONNECT A PULLUP REGISTER!
 
 ```
 Wire.begin(); // 初期化
